@@ -1,5 +1,4 @@
 # Internship
-BByteSolutions.Com: Thực Tập
 
 ### Web
 Học HTML And CSS
