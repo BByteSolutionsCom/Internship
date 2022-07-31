@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard_V1</title>
+  
     <link rel="stylesheet" href="res/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+   
+    <script src="/res/js/script.js" type="text/javascript"></script>
+
+
     <script src="https://kit.fontawesome.com/5015a0a620.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <div class="sidebar">
@@ -132,11 +140,16 @@
                 <span><i class="fa-regular fa-bell"></i></span>
             </div>
         </nav>
+        
+        <div class="title-page">
+            <h1>Dashboard</h1>
+            <h4>Welcome back, Erza Miller!</h4>
+        </div>
 
-        <div class="main-content">
+        <div class="container_1">
             <div class="left-content">
-                <h1>Dashboard</h1>
-                <h4>Welcome back, Erza Miller!</h4>
+               
+               
                 <div class="schedule-container">
                     <div class="schedule-container-header">
                         <h3>Schedule Content</h3>
@@ -199,7 +212,7 @@
                                 <h5>18</h5>
                             </div>
                             <div class="schedule-content">
-                                <h6>Write 6 microblog articles on Intagram</h6>
+                                <h6>Drafting Material for Travel Campain</h6>
                                 <small>Office / Marketing</small>
                             </div>
                         </div>
@@ -218,86 +231,162 @@
 
                 </div>
 
-                <div class="schedule-container">
-                    <div class="schedule-container-header">
-                        <h3>Top Channels</h3>
-                        <span>See Detail   <i class="fa-solid fa-chevron-right"></i></span>
-                    </div>
-                    <hr>
-
-                    <div class="channel-title">
-                        <h1>120K</h1>
-                        <span><i class="fa-solid fa-arrow-up-long"></i> 12%</span>
-                        <small>visit</small>
-                    </div>
-                    
-                    <div class="channel-persent-line">
-                        <span style="--persent-channel: 12%; --color: blue;"></span>
-                        <span style="--persent-channel: 43%; --color: rgb(239, 104, 127);"></span>
-                        <span style="--persent-channel: 20%; --color: rgb(0, 0, 144);"></span>
-                        <span style="--persent-channel: 8%; --color:red;"></span>
-                    </div>
-
-                    <div class="channel-row">
-                        <div class="channel-row-content">
-                            <div class="channel-name">
-                                  <img src="res/img/ic_fb.png" alt="">
-                                  <span style="--channel-name-color: blue;">Facebook</span>
-                            </div>
-                            <div class="channel-index">
-                                  <p>43 visitor</p>
-                                  <p>20%</p>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                    <div class="channel-row">
-                        <div class="channel-row-content">
-                            <div class="channel-name">
-                                  <img src="res/img/ic_is.png" alt="">
-                                  <span style="--channel-name-color: rgb(239, 104, 127);">Instagram</span>
-                            </div>
-                            <div class="channel-index">
-                                 <p>138 visitor</p>
-                                 <p>43%</p>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                    <div class="channel-row">
-                        <div class="channel-row-content">
-                            <div class="channel-name">
-                                  <img src="res/img/ic_li.png" alt="">
-                                  <span style="--channel-name-color: rgb(0, 0, 144);">Linkedin</span>
-                            </div>
-                            <div class="channel-index">
-                                    <p>75 visitor</p>
-                                    <p>20%</p>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-
-                    <div class="channel-row">
-                        <div class="channel-row-content">
-                            <div class="channel-name">
-                                  <img src="res/img/ic_yt.png" alt="">
-                                  <span style="--channel-name-color: red;">Youtube</span>
-                            </div>
-                            <div class="channel-index">
-                                  <p>12 visitor</p>
-                                  <p>8%</p>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
+               
             </div>
             <div class="right-content">
+                <div class="content-reach-summary">
+                    <div class="content-reach-summary-header">
+                        <h3>Content Reach Summary</h3>
+                        <span>Monthly   <i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                    <div class="crs-title">
+                        <div class="crs-title-left">
+                            <div class="legend-chart">
+                                <div class="legend-chart-item">
+                                    <div class="legend-color">
+                                        <span class="legend-light" style="--legend-color: rgba(1, 126, 250, 0.2); --legend-border-color: rgba(1, 126, 250, 0.2); --border-radius: 2px"></span>
+                                        Total Reach
+                                    </div>
+                                    <div class="legend-title">
+                                        <h1>150K</h1>
+                                        <span style="--up-down-color: lime;"><i class="fa-solid fa-arrow-up-long"></i> 12%</span>
+                                        <small>vs last 1 month</small>
+                                    </div>
+                                </div>
 
+                                <div class="legend-chart-item">
+                                    <div class="legend-color">
+                                        <span class="legend-light" style="--legend-color: rgba(1, 126, 250, 1); --legend-border-color: rgba(1, 126, 250, 0.2); --border-radius: 50%"></span>
+                                        Paid Reach
+                                    </div>
+                                    <div class="legend-title">
+                                        <h1>234K</h1>
+                                        <span style="--up-down-color: lime;"><i class="fa-solid fa-arrow-up-long"></i> 12%</span>
+                                        <small>vs last 1 month</small>
+                                    </div>
+                                </div>
+
+                                <div class="legend-chart-item">
+                                    <span class="legend-color">
+                                        <div class="legend-color">
+                                        <span class="legend-light" style="--legend-color: rgba(255, 99, 132, 1); --legend-border-color: pink; --border-radius: 50%"></span>
+                                            Oganic Reach
+                                        </div>
+                                    </span>
+                                    <div class="legend-title">
+                                        <h1>43K</h1>
+                                        <span style="--up-down-color: rgba(255, 99, 132, 1);"><i class="fa-solid fa-arrow-down-long"></i> 8%</span>
+                                        <small>vs last 1 month</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <span class="crs-title-right">
+                            <i class="fas fa-download"></i>
+                            <strong>CSV</strong>
+                        </span>
+                    </div>
+
+                    <div>
+                        <canvas id="myChart" height="100px"></canvas>
+                    </div>
+                </div>
+
+                  
             </div>
+            </div>
+
+            <div class="container_1">
+                <div class="left-content">
+                   
+                    <div class="schedule-container">
+                        <div class="schedule-container-header">
+                            <h3>Top Channels</h3>
+                            <span>See Detail   <i class="fa-solid fa-chevron-right"></i></span>
+                        </div>
+                        <hr>
+        
+                        <div class="channel-title">
+                            <h1>120K</h1>
+                            <span><i class="fa-solid fa-arrow-up-long"></i> 12%</span>
+                            <small>visit</small>
+                        </div>
+                        
+                        <div class="channel-persent-line">
+                            <span style="--persent-channel: 12%; --color: blue;"></span>
+                            <span style="--persent-channel: 43%; --color: rgb(239, 104, 127);"></span>
+                            <span style="--persent-channel: 20%; --color: rgb(0, 0, 144);"></span>
+                            <span style="--persent-channel: 8%; --color:red;"></span>
+                        </div>
+        
+                        <div class="channel-row">
+                            <div class="channel-row-content">
+                                <div class="channel-name">
+                                      <img src="res/img/ic_fb.png" alt="">
+                                      <span style="--channel-name-color: blue;">Facebook</span>
+                                </div>
+                                <div class="channel-index">
+                                      <p>43 visitor</p>
+                                      <p>20%</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+        
+                        <div class="channel-row">
+                            <div class="channel-row-content">
+                                <div class="channel-name">
+                                      <img src="res/img/ic_is.png" alt="">
+                                      <span style="--channel-name-color: rgb(239, 104, 127);">Instagram</span>
+                                </div>
+                                <div class="channel-index">
+                                     <p>138 visitor</p>
+                                     <p>43%</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+        
+                        <div class="channel-row">
+                            <div class="channel-row-content">
+                                <div class="channel-name">
+                                      <img src="res/img/ic_li.png" alt="">
+                                      <span style="--channel-name-color: rgb(0, 0, 144);">Linkedin</span>
+                                </div>
+                                <div class="channel-index">
+                                        <p>75 visitor</p>
+                                        <p>20%</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+        
+                        <div class="channel-row">
+                            <div class="channel-row-content">
+                                <div class="channel-name">
+                                      <img src="res/img/ic_yt.png" alt="">
+                                      <span style="--channel-name-color: red;">Youtube</span>
+                                </div>
+                                <div class="channel-index">
+                                      <p>12 visitor</p>
+                                      <p>8%</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+    
+                   
+                </div>
+                <div class="right-content">
+                    <div>
+                        <canvas id="myChart2" height="100px"></canvas>
+                    </div>
+                </div>
+    
+                      
+                </div>
         </div>
     </div>
 </body>
