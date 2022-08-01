@@ -1,6 +1,5 @@
 window.onload = function () {
     var ctx = document.getElementById('myChart').getContext('2d');
-    var ctx2 = document.getElementById('myChart2').getContext('2d');
 
 const myChart = new Chart(ctx, {
 
@@ -27,14 +26,6 @@ const myChart = new Chart(ctx, {
             fill: {
                 target: {
                     value:0
-                },
-                below: (context) => {
-                    const chart = context.chart;
-                    const {ctx, chartArea, data, scales} = chart;
-                    if(!chartArea) {
-                        return null;
-                    }
-                    return belowGradient(ctx, chartArea, data, scales);
                 }
             },
             borderColor: [
@@ -75,7 +66,12 @@ const myChart = new Chart(ctx, {
         plugins: {
             legend: {
               display: false
-            }
+            },
+            tooltip: {
+                mode: 'index',
+                intersect: false
+              }
+        
         },
         scales: {
             
@@ -113,70 +109,7 @@ const myChart = new Chart(ctx, {
     }
 });
 
-const myChart2 = new Chart(ctx2, {
 
-    data: {
-        labels: ['Apr 21', 'May 21', 'Jun 21', ' Aug 21', 'Sep 21'],
-        datasets: [{
-            type: 'bar',
-            data: [150000, 150000, 150000, 150000, 150000],
-            backgroundColor: [
-                'rgba(54, 162, 235, 0.04)'
-            ],
-            hoverBackgroundColor: 'rgba(255,255,255)',
-            borderRadius: 10,
-            borderWidth: 0,
-           
-        },
-
-        
-    ]
-    },
-    options: {
-       
-        responsive: true,
-        stepped: false,
-        
-        plugins: {
-            legend: {
-              display: false
-            }
-        },
-        scales: {
-            
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    min: 0, //minimum tick
-                    max: 200000, //maximum tick
-                    stepSize: 50000,
-                    callback: function(value, index, values) {
-                      return value > 0 ? Number((value / 1000).toString()) + 'K' : value; //pass tick values as a string into Number function
-                    },
-                  },
-                
-                grid: {
-                    display: false,
-                    drawBorder:false,
-                    borderJoinStyle: 'round',
-                   
-                }
-               
-            },
-
-            x: {
-                beginAtZero: true,
-                
-                grid: {
-                    lineWidth: 0,
-                    drawBorder: false,
-                   
-                }
-               
-            }
-        }
-    }
-});
 }
 
 function belowGradient(ctx, chartArea, data, scales) {

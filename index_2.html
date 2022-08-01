@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard_V2</title>
+  
+    <link rel="stylesheet" href="res/css/style_2.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
+   
+    <script src="/res/js/script_2.js" type="text/javascript"></script>
+
+
+    <script src="https://kit.fontawesome.com/5015a0a620.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="logo"><i class="fa-solid fa-bolt"></i></span>
+            <h2> Dash</h2>
+        </div>
+        <button type="button" class="collapse-button"><i class="fa-solid fa-angle-left"></i></button>
+        <div class="sidebar-content">
+            <p class="sidebar-title">MAIN MENU</p>
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-chart-simple"></i></span>
+                    <p>Dashboard</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-comment-dots"></i></span>
+                    <p>Inbox</p>
+                </div>
+                <span>1</span>
+            </div>
+            
+            <p class="sidebar-title">Workspace</p>
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-user"></i></span>
+                    <p>Accounts</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-calendar-check"></i></span>
+                    <p>Schedule Post</p>
+                </div>
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></i></span>
+                    <p>Communities</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-chart-line"></i></span>
+                    <p>Alalytics</p>
+                </div>
+            </div>
+
+            <p class="sidebar-title">General</p>
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-folder-closed"></i></span>
+                    <p>File & Folder</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-gear"></i></span>
+                    <p>Settings</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="sidebar-footer">
+            <span class="question-icon"><i class="fa-regular fa-circle-question"></i></span>
+            <p>Need help with Dash?</p>
+            <div><button type="button" class="support-button">Go to help center</button></div>
+        </div>
+    </div>
+    <div class="main">
+        <nav class="nav-bar">
+            <div class="left-nav">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="right-nav">
+                <div class="profile-nav">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <ion-icon name="notifications-outline"></ion-icon>
+                    <img src="res/img/profile-pic.png" alt="" class="avatar">
+                    <p>Erza Miller</p>
+                    <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+               
+            </div>
+        </nav>
+        
+       
+        <div class="container_1">
+            
+            <div class="chart-title">
+                <div class="legend-crs-chart">
+
+                    <div class="legend-crs-chart-item">
+                        <span class="lcci-icon" style="--lcci-bg-color: #9fc5ff5a;">
+                            <ion-icon name="square-outline" class="square-icon" style="--lcci-icon-bg-color: #1f5179;"></ion-icon>
+                            <ion-icon name="triangle-outline" class="triangle-icon" style="--lcci-icon-bg-color-2: rgb(98, 171, 255);"></ion-icon>
+                        </span>
+                        <div class="lcci-text">
+                            <p>Total Reach</p>
+                            <h1>150K</h1>
+                        </div>
+                    </div>
+
+                    <div class="legend-crs-chart-item">
+                        <span class="lcci-icon" style="--lcci-bg-color: #9fffcc5a;">
+                            <ion-icon name="square-outline" class="square-icon" style="--lcci-icon-bg-color: #2a8d27;"></ion-icon>
+                            <ion-icon name="triangle-outline" class="triangle-icon" style="--lcci-icon-bg-color-2: rgb(98, 255, 145);"></ion-icon>
+                        </span>
+                        <div class="lcci-text">
+                            <p>Total Paid Reach</p>
+                            <h1>115K</h1>
+                        </div>
+                    </div>
+
+                    <div class="legend-crs-chart-item">
+                        <span class="lcci-icon" style="--lcci-bg-color: #ff9faf5a;">
+                            <ion-icon name="square-outline" class="square-icon" style="--lcci-icon-bg-color: #ad3030;"></ion-icon>
+                            <ion-icon name="triangle-outline" class="triangle-icon" style="--lcci-icon-bg-color-2: rgb(255, 98, 109);"></ion-icon>
+                        </span>
+                        <div class="lcci-text">
+                            <p>Total Oganic Reach</p>
+                            <h1>35K</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-crs-chart">
+                    <div class="radio">
+                        <input class="radio-input" type="radio" value="Daily" name="myRadio" id="rd-daily" checked="true">
+                        <label class="radio-label" for="rd-daily">Daily</label>
+
+                        <input class="radio-input" type="radio" value="Weekly" name="myRadio" id="rd-weekly">
+                        <label class="radio-label" for="rd-weekly">Weekly</label>
+
+                        <input class="radio-input" type="radio" value="Monthly" name="myRadio" id="rd-monthly">
+                        <label class="radio-label" for="rd-monthly">Monthly</label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container-chart-1">
+                <canvas id="myChart" height="290px"></canvas>
+            </div>
+               
+               
+              
+        </div>
+    </div>
+</body>
+</html>

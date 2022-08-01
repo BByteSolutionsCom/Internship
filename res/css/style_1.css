@@ -41,7 +41,6 @@ body {
 .sidebar {
     background-color: var(--primary-color);
     width: 230px;
-    height: 100%;
     position: relative;
 }
 
@@ -251,6 +250,13 @@ nav {
     padding: 20px 20px;
 }
 
+.right-nav span i {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .friend-nav {
     display: flex;
 }
@@ -335,6 +341,7 @@ nav {
 .right-content {
     flex-basis: 70%;
     margin-left: 20px;
+    position: relative;
 }
 
 
@@ -343,6 +350,7 @@ nav {
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .schedule-container-header {
@@ -365,7 +373,9 @@ nav {
     margin: 0 auto;
     height: 0.15px;
     color: #f0f0f027;
+    opacity: 0.15;
 }
+
 
 .schedule-row {
     padding: 10px;
@@ -528,6 +538,10 @@ nav {
     font-size: 14px;
 }
 
+.content-reach-summary-header span i {
+    color: var(--title-color);
+}
+
 /* crs = content-reach-summary */
 
 .crs-title {
@@ -539,6 +553,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 .crs-title-left {
@@ -599,6 +614,219 @@ nav {
     font-size: 14px;
 }
 
+.container-chart-1 {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
 #myChart {
-    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.audience-visitor {
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+/* av = audience-visitor */
+.av-header {
+    width: 100%;
+}
+
+.av-chart-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.legend-av {
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.av-chart-title span i {
+    color: var(--title-color)
+}
+
+.legend-av span {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-av span::before {
+    content: "";
+    display: flex;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    margin-top: 3px;
+    background-color: var(--legend-av-color);
+    border-radius: 50%;
+}
+
+.av-chart {
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+.line-y {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    padding-bottom: 50px;
+    
+}
+
+.line-y p {
+    color: var(--sub-text-color);
+    font-size: 13px;
+}
+
+
+.container-x {
+    flex: 1;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+
+.av-x-index {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.av-x-index:hover {
+    background-color: white;
+}
+
+.column-f-m {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.column-index {
+    flex: 1;
+}
+
+.column-f-m p {
+    color: var(--sub-text-color);
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    padding-top: 15px;
+}
+
+.column-index {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 80px;
+    
+}
+
+.av-x-male {
+    
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+ 
+    margin-right: 3px;
+    
+}
+
+.av-x-female {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+   
+    
+}
+
+.av-x-male p {
+    color: var(--sub-text-color);
+    font-size: 12px;
+    text-align: center;
+    display: none;
+}
+
+.av-x-male div {
+    height: var(--av-index-persent);
+    background-color: var(--secondary-color);
+    opacity: 0.3;
+    border-radius: 5px;
+    animation: growth ease-in 0.5s;
+}
+
+.av-x-female p {
+    color: var(--sub-text-color);
+    font-size: 12px;
+    text-align: center;
+    display: none;
+}
+
+.av-x-female div {
+    height: var(--av-index-persent);
+    background-color: var(--title-color);
+    opacity: 0.3;
+    border-radius: 5px;
+    animation: growth ease-in 0.5s;
+}
+
+.av-x-index:hover .av-x-female div {
+    opacity: 1;
+}
+
+.av-x-index:hover .av-x-female p {
+    display: block;
+}
+
+.av-x-index:hover .av-x-male div {
+    opacity: 1;
+}
+
+.av-x-index:hover .av-x-male p {
+    display: block;
+}
+
+@keyframes growth {
+    from {
+        height: calc(var(--av-index-persent) - 50%);
+    }
+    to {
+        height: var(--av-index-persent);
+    }
 }
