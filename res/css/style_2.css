@@ -271,7 +271,7 @@ nav {
 
 .container_1 {
     background-color: #fff;
-    margin: 20px 10px;
+    margin: 20px 20px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -363,49 +363,238 @@ nav {
     color: var(--secondary-color);
 }
 
+.container_2 {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
 .left-content {
-    flex-basis: 30%;
+    flex-basis: 60%;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .right-content {
-    flex-basis: 70%;
+    flex-basis: 38%;
     margin-left: 20px;
-    position: relative;
-}
-
-
-.schedule-container {
     background-color: #fff;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.schedule-container-header {
+.demographic-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
 }
 
-.schedule-container-header span {
+.demographic-header span {
     color: var(--secondary-color);
-    font-size: 13px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.schedule-container-header span i {
-    margin-left: 10px;
+.demographic-header span i {
+    margin-left: 5px;
 }
 
-.schedule-container hr {
+.left-content hr {
     margin: 0 auto;
     height: 0.15px;
     color: #f0f0f027;
     opacity: 0.15;
 }
 
+.right-content hr {
+    margin: 0 auto;
+    height: 0.15px;
+    color: #f0f0f027;
+    opacity: 0.15;
+}
+
+.demographic-header div {
+    display: flex;
+    align-items: center;
+}
+
+.demographic-header div span {
+    background-color: var(--secondary-color);
+    padding: 6px 8px;
+    border-radius: 50%;
+    color: #fff;
+    --ionicon-stroke-width: 56px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
 #myChart {
     width: 100%;
     height: 100%;
 }
+
+
+.container_2 {
+    display: flex;
+}
+
+.container-chart-2 {
+    width: 300px;
+    padding: 10px;
+}
+
+.legend-d-chart {
+    display: flex;
+    justify-content: space-between;
+}
+.legend-d-chart p {
+    display: flex;
+    align-items: center;
+}
+
+.legend-d-chart p::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--lg-color);
+    margin-right: 5px;
+}
+
+.audience-age-table {
+    width: 100%;
+    background-color: #f0f0f060;
+    border-radius: 5px;
+    margin: 30px;
+    padding: 20px;
+}
+
+.audience-age-table p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.demographic-content {
+    display: flex;
+    width: 100%;
+}
+
+.line-persent {
+    display: flex;
+    height: 5px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.per-1 {
+    width: var(--per);
+    background-color: var(--per-color);
+    border-radius: 2px;
+    margin-right: 1px;
+}
+
+.persent-row p {
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.persent-row p i {
+    margin-right: 3px;
+    font-size: 10px;
+    
+}
+
+.persent-row p::before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: var(--lg-color);
+    margin-right: 8px;
+}
+
+.persent-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0px 0px 0;
+}
+
+.persent-row h6 {
+    color: var(--secondary-color);
+    background-color: #017dfa1d;
+    padding: 6px 8px;
+    border-radius: 5px;
+}
+
+.persent-row span {
+    display: flex;
+    align-items: center;
+    flex-basis: 40%;
+    justify-content: space-between;
+}
+
+.channel-source p{
+    text-align: left;
+    flex-basis: 30%;
+}
+
+.channel-row:first-of-type{
+    padding: 20px 20px 0px 20px ;
+}
+
+.channel-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+.cs-row {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 30%;
+}
+
+.cv-row {
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 65%;
+}
+.cs-row img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.cv-row span {
+    width: var(--per-row);
+    height: 30px;
+    background-color: #18b6f2;
+    margin-left: 20px;
+    border-radius: 5px;
+    animation: growth ease-in 0.5s;
+}
+
+.cv-row h6 {
+    color: lime;
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+
+@keyframes growth {
+    from {
+        width: calc(var(--per-row) - 50%);
+    }
+    to {
+        width: var(--per-row);
+    }
+}
+

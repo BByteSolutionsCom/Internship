@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="res/css/style_2.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
-   
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-crosshair@1.2.0/dist/chartjs-plugin-crosshair.min.js"></script> -->
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
     <script src="/res/js/script_2.js" type="text/javascript"></script>
+
+
 
 
     <script src="https://kit.fontawesome.com/5015a0a620.js" crossorigin="anonymous"></script>
@@ -167,12 +176,163 @@
                 
             </div>
             <div class="container-chart-1">
-                <canvas id="myChart" height="290px"></canvas>
+                <canvas id="myChart" height="350px"></canvas>
             </div>
                
                
               
         </div>
+        <div class="container_2">
+            <div class="left-content">
+                <div class="demographic-header">
+                    <div>
+                        <span><ion-icon name="pie-chart-outline"></ion-icon></span>
+                        <h3>Demographic</h3>
+                    </div>
+                    <span>See Detail   <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <hr>
+                <div class="demographic-content">
+                    <div class="container-chart-2">
+                        <div>
+                            <canvas id="myChart2" ></canvas>
+                        </div>
+                        <div class="legend-d-chart">
+                            <p style="--lg-color: rgb(1, 126, 250);">Male</p>
+                            <p style="--lg-color: rgb(81, 203, 255);">Female</p>
+                            <p style="--lg-color: rgb(48, 218, 136);">Orther</p>
+                        </div>
+                    </div>
+                    <div class="audience-age-table">
+                        <p>Audience Age</p>
+                        <div class="line-persent">
+                            <div class="per-1" style="--per-color: rgb(250, 1, 184); --per: 27%"></div>
+                            <div class="per-1" style="--per-color: rgb(1, 126, 250); --per: 40%"></div>
+                            <div class="per-1" style="--per-color: rgb(48, 218, 136); --per: 26%"></div>
+                            <div class="per-1" style="--per-color: rgb(88, 48, 218); --per: 8%"></div>
+                        </div>
+                        <div class="persent-table">
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(250, 1, 184);"> <i class="fas fa-chevron-left"></i> 15 years old </p>
+                                <span>
+                                    <h5>21K</h5>
+                                    <h6>27%</h5>  
+                                </span>
+                            </div>
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(1, 126, 250);"> 20 - 35 years old </p>
+                                <span>
+                                    <h5>64K</h5>
+                                    <h6>40%</h5>
+                                </span>
+                            </div>
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(48, 218, 136);"> 40 - 50 years old </p>
+                                <span>
+                                    <h5>18K</h5>
+                                    <h6>26%</h5>
+                                </span>
+                            </div>
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(88, 48, 218);"> <i class="fas fa-chevron-right"></i> 50 years old </p>
+                                <span>
+                                    <h5>5K</h5>
+                                    <h6>8%</h5>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="right-content">
+                <div class="demographic-header">
+                    <div>
+                        <span><ion-icon name="pie-chart-outline"></ion-icon></span>
+                        <h3>Top Channels</h3>
+                    </div>
+                    <span>See Detail   <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <hr>
+                <div class="channel-table">
+                    
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            Source
+                        </div>
+                        
+                        <div class="cv-row">
+                            Visits
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_fb.png" alt="">
+                            <h5>Facebook</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 60%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_is.png" alt="">
+                            <h5>Instagram</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 30%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_li.png" alt="">
+                            <h5>Facebook</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 80%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_yt.png" alt="">
+                            <h5>Facebook</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 20%"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
 </body>
 </html>

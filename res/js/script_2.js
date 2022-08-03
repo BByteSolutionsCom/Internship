@@ -1,7 +1,6 @@
 window.onload = function () {
-    var ctx = document.getElementById('myChart').getContext('2d');
 
-const myChart = new Chart(ctx, {
+const myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
 
     data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -40,6 +39,29 @@ const myChart = new Chart(ctx, {
             borderWidth: 3,
            
         }
+        ,
+        {
+            type: 'bar',
+            label: '# of Votes',
+            data: [200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000, 200000],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.04)'
+            ],
+            hoverBackgroundColor: 'rgba(255,255,255)',
+            borderRadius: 10,
+            borderWidth: 0,
+            options: {
+                scales: {
+                    x: {
+                        
+                        ticks: {
+                            backgroundColor: 'rgba(0,0,0,0)',
+                            display: false
+                        }
+                    }
+                }
+            }
+        }
     ]
     },
     options: {
@@ -52,8 +74,15 @@ const myChart = new Chart(ctx, {
             },
             tooltip: {
                 mode: 'index',
-                intersect: false
-              }
+                intersect: false,
+                enable: false
+            },
+            crosshair: {
+                line: {
+                    width: 2,
+                    dashPattern: [2, 2]
+                }
+            }
         
         },
         scales: {
@@ -91,8 +120,87 @@ const myChart = new Chart(ctx, {
     }
 });
 
+const counter = {
+    id: 'counter',
+    beforeDraw(chart, args, options) {
+        const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
+        ctx.save();
+        ctx.font = options.fontSize + ' ' + options.fontFamily;
+        ctx.textAlign = 'center';
+        ctx.fillStyle = options.fontColor;
+        ctx.fillText('Gender', (width / 2) + 20, (height / 2) + 25);
+    }
+}
+
+const myChart1 = new Chart(document.getElementById('myChart2').getContext('2d'), {
+    
+    type: 'doughnut',
+    data: {
+        labels: [
+            'Male',
+            'Female',
+            'Orther'],
+        datasets: [{
+            data: [68, 38, 12],
+            backgroundColor: [
+                'rgb(1, 126, 250)',
+                'rgb(81, 203, 255)',
+                'rgb(48, 218, 136)'
+            ],
+            borderWidth: 3,
+            hoverOffset: 3
+        }, ]
+    },
+    options: {
+        responsive: true,
+        stepped: false,
+        cutout: '65%',
+        rotation: 260,
+        layout: {
+            padding: 20
+        },
+        plugins: {
+            legend: {
+              display: false
+            },
+            counter: {
+                fontColor: '#000',
+                fontSize: '18px',
+                fontFamily: 'sans-serif'
+            },
+            datalabels: {
+                formatter: function(value, context) {
+                    return Math.round(value) + '%';
+                },
+                anchor: 'end',
+                backgroundColor: '#fff',
+                padding: {
+                    top: 13,
+                    bottom: 13,
+                    left: 8,
+                    right: 8
+                },
+                color: '#000',
+                font: {
+                    style: 'bold',
+                    size: '15px'
+                },
+                borderColor: '#f0f0f0',
+                borderWidth: 1,
+                borderRadius: 100
+            }
+        }
+    },
+    plugins: [ChartDataLabels, counter]
+}
+
+);
 
 }
+
+
+
+
 
 
 
