@@ -527,7 +527,7 @@ nav {
 
 .persent-row h6 {
     color: var(--secondary-color);
-    background-color: #017dfa1d;
+    background-color: #f0f0f060;
     padding: 6px 8px;
     border-radius: 5px;
 }
@@ -546,25 +546,28 @@ nav {
 
 .channel-row:first-of-type{
     padding: 20px 20px 0px 20px ;
+    background-color: transparent;
 }
 
 .channel-row {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
     width: 100%;
+    background-color: #f0f0f060;
 }
 
 .cs-row {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     flex-basis: 30%;
 }
 
 .cv-row {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     flex-basis: 65%;
 }
 .cs-row img {
