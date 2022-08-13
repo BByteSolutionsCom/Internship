@@ -1,0 +1,323 @@
+﻿@page "/dashboard_2"
+
+<div class="d-flex">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard_3" class="d-flex text-decoration-none align-items-center">
+                <span class="logo"><i class="fa-solid fa-bolt"></i></span>
+                <h2> Dash</h2>
+            </a>
+            
+        </div>
+        <button type="button" class="collapse-button"><i class="fa-solid fa-angle-left"></i></button>
+        <div class="sidebar-content">
+            <p class="sidebar-title">MAIN MENU</p>
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-chart-simple"></i></span>
+                    <p class="mb-0">Dashboard</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-comment-dots"></i></span>
+                    <p class="mb-0">Inbox</p>
+                </div>
+                <span>1</span>
+            </div>
+            
+            <p class="sidebar-title">Workspace</p>
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-user"></i></span>
+                    <p class="mb-0">Accounts</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-calendar-check"></i></span>
+                    <p class="mb-0">Schedule Post</p>
+                </div>
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <p class="mb-0">Communities</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-chart-line"></i></span>
+                    <p class="mb-0">Alalytics</p>
+                </div>
+            </div>
+
+            <p class="sidebar-title">General</p>
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-regular fa-folder-closed"></i></span>
+                    <p class="mb-0">File & Folder</p>
+                </div>
+                
+            </div>
+
+            <div class="sidebar-row">
+                <div class="l-s-row">
+                    <span><i class="fa-solid fa-gear"></i></span>
+                    <p class="mb-0">Settings</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="sidebar-footer">
+            <span class="question-icon"><i class="fa-regular fa-circle-question"></i></span>
+            <p>Need help with Dash?</p>
+            <div><button type="button" class="support-button">Go to help center</button></div>
+        </div>
+    </div>
+    <div class="main">
+        <nav class="nav-bar">
+            <div class="left-nav">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="right-nav">
+                <div class="profile-nav">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <ion-icon name="notifications-outline"></ion-icon>
+                    <img src="res/img/profile-pic.png" alt="" class="avatar">
+                    <p class="mb-0">Erza Miller</p>
+                    <span><i class="fa-solid fa-angle-down"></i></span>
+                </div>
+               
+            </div>
+        </nav>
+        
+       
+        <div class="container_1">
+            
+            <div class="chart-title">
+                <div class="legend-crs-chart">
+
+                    <div class="legend-crs-chart-item">
+                        <span class="lcci-icon" style="--lcci-bg-color: #9fc5ff5a;">
+                            <ion-icon name="square-outline" class="square-icon" style="--lcci-icon-bg-color: #1f5179;"></ion-icon>
+                            <ion-icon name="triangle-outline" class="triangle-icon" style="--lcci-icon-bg-color-2: rgb(98, 171, 255);"></ion-icon>
+                        </span>
+                        <div class="lcci-text">
+                            <p>Total Reach</p>
+                            <h1>150K</h1>
+                        </div>
+                    </div>
+
+                    <div class="legend-crs-chart-item">
+                        <span class="lcci-icon" style="--lcci-bg-color: #9fffcc5a;">
+                            <ion-icon name="square-outline" class="square-icon" style="--lcci-icon-bg-color: #2a8d27;"></ion-icon>
+                            <ion-icon name="triangle-outline" class="triangle-icon" style="--lcci-icon-bg-color-2: rgb(98, 255, 145);"></ion-icon>
+                        </span>
+                        <div class="lcci-text">
+                            <p>Total Paid Reach</p>
+                            <h1>115K</h1>
+                        </div>
+                    </div>
+
+                    <div class="legend-crs-chart-item">
+                        <span class="lcci-icon" style="--lcci-bg-color: #ff9faf5a;">
+                            <ion-icon name="square-outline" class="square-icon" style="--lcci-icon-bg-color: #ad3030;"></ion-icon>
+                            <ion-icon name="triangle-outline" class="triangle-icon" style="--lcci-icon-bg-color-2: rgb(255, 98, 109);"></ion-icon>
+                        </span>
+                        <div class="lcci-text">
+                            <p>Total Oganic Reach</p>
+                            <h1>35K</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-crs-chart">
+                    <div class="radio">
+                        <input class="radio-input" type="radio" value="Daily" name="myRadio" id="rd-daily" checked="true">
+                        <label class="radio-label" for="rd-daily">Daily</label>
+
+                        <input class="radio-input" type="radio" value="Weekly" name="myRadio" id="rd-weekly">
+                        <label class="radio-label" for="rd-weekly">Weekly</label>
+
+                        <input class="radio-input" type="radio" value="Monthly" name="myRadio" id="rd-monthly">
+                        <label class="radio-label" for="rd-monthly">Monthly</label>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="container-chart-1 d-flex justify-content-center align-items-center w-100" height="500px">
+                        <p>
+                            Biểu đồ
+                        </p> 
+                        @*<canvas id="myChart" height="290px" width="100%"></canvas>*@
+
+                    </div>
+               
+               
+              
+        </div>
+        <div class="container_2">
+            <div class="left-content">
+                <div class="demographic-header align-items-center">
+                    <div class="d-flex align-items-center">
+                        <span class="my-auto"><ion-icon name="pie-chart-outline"></ion-icon></span>
+                        <h3 class="mb-0">Demographic</h3>
+                    </div>
+                    <span>See Detail   <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <hr>
+                <div class="demographic-content">
+                    <div class="container-chart-2">
+                          <div class="container-chart-1 d-flex justify-content-center align-items-center w-100" height="500px">
+                        <p>
+                            Biểu đồ
+                        </p> 
+                        @*<canvas id="myChart" height="290px" width="100%"></canvas>*@
+
+
+                    </div>
+                        <div class="legend-d-chart">
+                            <p style="--lg-color: rgb(1, 126, 250);">Male</p>
+                            <p style="--lg-color: rgb(81, 203, 255);">Female</p>
+                            <p style="--lg-color: rgb(48, 218, 136);">Orther</p>
+                        </div>
+                    </div>
+                    <div class="audience-age-table">
+                        <p>Audience Age</p>
+                        <div class="line-persent">
+                            <div class="per-1" style="--per-color: rgb(250, 1, 184); --per: 27%"></div>
+                            <div class="per-1" style="--per-color: rgb(1, 126, 250); --per: 40%"></div>
+                            <div class="per-1" style="--per-color: rgb(48, 218, 136); --per: 26%"></div>
+                            <div class="per-1" style="--per-color: rgb(88, 48, 218); --per: 8%"></div>
+                        </div>
+                        <div class="persent-table">
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(250, 1, 184);"> <i class="fas fa-chevron-left"></i> 15 years old </p>
+                                <span>
+                                    <h5>21K</h5>
+                                    <h6>27%</h6>  
+                                </span>
+                            </div>
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(1, 126, 250);"> 20 - 35 years old </p>
+                                <span>
+                                    <h5>64K</h5>
+                                    <h6>40%</h6>
+                                </span>
+                            </div>
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(48, 218, 136);"> 40 - 50 years old </p>
+                                <span>
+                                    <h5>18K</h5>
+                                    <h6>26%</h6>
+                                </span>
+                            </div>
+                            <div class="persent-row">
+                                <p style="--lg-color: rgb(88, 48, 218);"> <i class="fas fa-chevron-right"></i> 50 years old </p>
+                                <span>
+                                    <h5>5K</h5>
+                                    <h6>8%</h6>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="right-content">
+                <div class="demographic-header">
+                    <div>
+                        <span><ion-icon name="pie-chart-outline"></ion-icon></span>
+                        <h3>Top Channels</h3>
+                    </div>
+                    <span>See Detail   <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <hr>
+                <div class="channel-table">
+                    
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            Source
+                        </div>
+                        
+                        <div class="cv-row">
+                            Visits
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_fb.png" alt="">
+                            <h5>Facebook</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 60%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_is.png" alt="">
+                            <h5>Instagram</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 30%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_li.png" alt="">
+                            <h5>Facebook</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 80%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="channel-row">
+                        
+                        <div class="cs-row">
+                            <img src="res/img/ic_yt.png" alt="">
+                            <h5>Facebook</h5>
+                        </div>
+                        
+                        <div class="cv-row">
+                            <h5>124K</h5>
+                            <h6>+12%</h6>
+                            <span style="--per-row: 20%"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>

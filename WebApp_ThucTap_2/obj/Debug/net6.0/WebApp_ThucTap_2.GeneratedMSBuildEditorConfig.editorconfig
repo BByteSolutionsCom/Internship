@@ -1,0 +1,43 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = WebApp_ThucTap_2
+build_property.RootNamespace = WebApp_ThucTap_2
+build_property.ProjectDir = C:\Users\linhl\source\repos\WebApp_ThucTap_2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\linhl\source\repos\WebApp_ThucTap_2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/linhl/source/repos/WebApp_ThucTap_2/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/linhl/source/repos/WebApp_ThucTap_2/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/linhl/source/repos/WebApp_ThucTap_2/Pages/Dashboard_1.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXzEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5z9mn45obe
+
+[C:/Users/linhl/source/repos/WebApp_ThucTap_2/Pages/Dashboard_2.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXzIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-wxxx6u0v7j
+
+[C:/Users/linhl/source/repos/WebApp_ThucTap_2/Pages/Dashboard_3.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXzMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-5jrade0stg
+
+[C:/Users/linhl/source/repos/WebApp_ThucTap_2/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0vfr4lrmj6

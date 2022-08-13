@@ -1,0 +1,583 @@
+﻿@page "/dashboard_3"
+<div class="main">
+        <aside>
+            <a href="/" class="text-decoration-none">
+                <div class="top">
+            <div class="logo">
+              <span class="material-symbols-rounded text-white">
+                bolt
+              </span>
+            </div>
+            <p class="h5">Dash</p>
+
+            <div class="close">
+              <span class="material-symbols-rounded">
+                chevron_left
+                </span>
+            </div>
+          </div>
+                </a>
+          
+          <section>
+            <p>MAIN MENU</p>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    insert_chart
+                  </span>
+                  <h6>Dashboard</h6>
+                </div>
+             
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    chat
+                  </span>
+                  <h6>Inbox</h6>
+                </div>
+                <span class="bardge">5</span>
+              </li>
+              
+            </ul>
+          </section>
+
+          <section>
+            <p>Workspace</p>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    account_box
+                  </span>
+                  <h6>Accounts</h6>
+                </div>
+             
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    event_note
+                  </span>
+                  <h6>Schedule Post</h6>
+                </div>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    search
+                  </span>
+                  <h6>Communities</h6>
+                </div>
+             
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    query_stats
+                  </span>
+                  <h6>Analytics</h6>
+                </div>
+              </li>
+              
+            </ul>
+          </section>
+
+          <section>
+            <p>General</p>
+            <ul class="menu-list">
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    folder_copy
+                  </span>
+                  <h6>File & Folders</h6>
+                </div>
+             
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__title">
+                  <span class="material-symbols-rounded">
+                    settings
+                  </span>
+                  <h6>Settings</h6>
+                </div>
+              </li>
+              
+            </ul>
+          </section>
+
+          <div class="sidebar-footer">
+            <span class="material-symbols-rounded question-icon">
+              help
+              </span>
+            <p>Need help with Dash?</p>
+            <div><button type="button" class="support-button">Go to help center</button></div>
+        </div>
+        </aside>
+
+        <div class="main-content">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3 pb-3 ps-4">
+       
+              <div class="container-fluid d-flex justify-content-between">
+                <span class="navbar-brand mb-1 h1">Dashboard</span>
+                <div class="container-fluid d-flex justify-content-end align-content-center">
+                  <div class="search-block rounded p-1">
+                    <span class="material-symbols-rounded p-1 ">
+                      search
+                      </span>
+                    <input type="text" placeholder="Search..." autocomplete="off" class="border-0 bg-transparent" />
+                  </div>
+                  <div class="profile-nav">
+                    <span class="material-symbols-rounded ic-bell rounded-circle p-1 me-3">
+                      notifications
+                      </span>
+                    <img src="res/img/profile-pic.png" alt="" class="avatar">
+                    <p>Erza Miller</p>
+                    <span class="material-symbols-rounded ic-more ms-3">
+                      keyboard_arrow_down
+                      </span>
+                </div>
+                </div>
+              </div>
+          </nav>
+
+          <div class="container d-flex justify-content-between">
+            <div class="left-container">
+              <!-- Content Reach Summary -->
+              <div class="crs-container bg-white m-3 rounded p-3">
+                <div class="crs-header d-flex justify-content-between align-items-center">
+                  <div class="crs-header__title d-flex align-content-center">
+                    <span class="material-symbols-rounded p-1 rounded-circle bg-primary text-white">
+                      pie_chart
+                      </span>
+                      <h5 class="mb-0 ms-3 pt-1 fw-bold">Content Reach Summary</h5>
+                  </div>
+                  <div class="filter-crs-chart me-3">
+                    <div class="radio">
+                        <input class="radio-input" type="radio" value="Daily" name="myRadio" id="rd-daily" checked="true">
+                        <label class="radio-label" for="rd-daily">Daily</label>
+
+                        <input class="radio-input" type="radio" value="Weekly" name="myRadio" id="rd-weekly">
+                        <label class="radio-label" for="rd-weekly">Weekly</label>
+
+                        <input class="radio-input" type="radio" value="Monthly" name="myRadio" id="rd-monthly">
+                        <label class="radio-label" for="rd-monthly">Monthly</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="container-chart-1 d-flex w-100">
+                  <canvas id="myChart" height="240px" class="mt-3 me-3"></canvas>
+                  
+                  <div class="legend-crs-chart m-3 rounded">
+                    <div class="legend-crs-chart-title rounded p-3">
+                      <div class="legend-crs-chart-item">
+                        <div class="lcci-text">
+                            <h2>150K</h2>
+                            <h6 class="h6 fw-normal">Total Reach</h6>
+                        </div>
+                      </div>
+
+                      <div class="legend-crs-chart-item">
+                          <div class="lcci-text" >
+                              <h2>115K <p style="display: inline-block; color: lime; font-size: 14px; margin-bottom: 0;">+12%</p></h2>
+                              <p class="d-flex" style="--lcci-color: blue">Total Paid Reach</p>
+                          </div>
+                      </div>
+
+                      <div class="legend-crs-chart-item"  >
+                          <div class="lcci-text">
+                              <h2>35K <p style="display: inline-block; color: red; font-size: 14px; margin-bottom: 0;">-8%</p></h2>
+                              <p class="d-flex" style="--lcci-color: pink">Total Oganic Reach</p> 
+                      </div>
+                      </div>
+                    </div>
+                    <div class="legend-crs-chart-sub d-flex mt-3">
+                      <span class="material-symbols-rounded me-2 rounded-circle text-white bg-primary">
+                        mood
+                        </span>
+                        <div class="legend-crs-chart-subtitle">
+                          <h6 class="fw-bolder">You're doing good!</h6>
+                          <p>Your much performance is 12% better compate to last year</p>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                
+              </div>
+              
+              <!-- Schedule Content -->
+              <div class="schedule-content m-3 bg-white rounded">
+                <div class="schedule-content-header d-flex p-3 justify-content-between">
+                  <div class="d-flex">
+                    <span class="material-symbols-rounded p-1 rounded-circle bg-primary text-white">
+                    pie_chart
+                    </span>
+                    <h5 class="mb-0 ms-3 pt-1 fw-bold">Schedule Content</h5>
+                  </div>
+                    <span class="d-flex align-items-center text-primary">See Details <span class="material-symbols-outlined mt-1">
+                      navigate_next
+                      </span></span>
+                </div>
+                <div class="sc-content d-flex">
+                  <div class="sc-left-content">
+                    <h6 class="ms-3 fw-bolder">Upcoming Event</h6>
+                    <ul class="ms-3">
+                      <li class="d-flex align-items-center justify-content-between pt-2 pb-2">
+                        <div class="d-flex align-items-center w-75">
+                          <span class="material-symbols-outlined text-primary fs-6">
+                            splitscreen
+                          </span>
+                          <p class="task-title mb-0 ms-3 ">New Store Product Campaingn</p>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                          <p class="level-task" style="--color: var(--secondary-color);">M</p>
+                          <span class="material-symbols-outlined">
+                          more_horiz
+                          </span>
+                        </div>
+                        
+                      </li>
+                      <li class="d-flex align-items-center justify-content-between pt-2 pb-2">
+                        <div class="d-flex align-items-center w-75">
+                          <span class="material-symbols-outlined text-primary fs-6">
+                            splitscreen
+                          </span>
+                          <p class="task-title mb-0 ms-3 ">Post A Travel Poster</p>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                          <p class="level-task" style="--color: var(--primary-color);">P</p>
+                          <span class="material-symbols-outlined">
+                          more_horiz
+                          </span>
+                        </div>
+                        
+                      </li>
+                      <li class="d-flex align-items-center justify-content-between pt-2 pb-2">
+                        <div class="d-flex align-items-center w-75">
+                          <span class="material-symbols-outlined text-primary fs-6">
+                            splitscreen
+                          </span>
+                          <p class="task-title mb-0 ms-3 ">Mars Travel Manual For Mark Lorem, ipsum.</p>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                          <p class="level-task" style="--color: rgb(240, 84, 110);">D</p>
+                          <span class="material-symbols-outlined">
+                          more_horiz
+                          </span>
+                        </div>
+                        
+                      </li>
+                      <li class="d-flex align-items-center justify-content-between pt-2 pb-2">
+                        <div class="d-flex align-items-center w-75">
+                          <span class="material-symbols-outlined text-primary fs-6">
+                            splitscreen
+                          </span>
+                          <p class="task-title mb-0 ms-3 ">Review with Complance</p>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                          <p class="level-task" style="--color: var(--secondary-color);">M</p>
+                          <span class="material-symbols-outlined">
+                          more_horiz
+                          </span>
+                        </div>
+                        
+                      </li>
+                      <li class="d-flex align-items-center justify-content-between pt-2 pb-2">
+                        <div class="d-flex align-items-center w-75">
+                          <span class="material-symbols-outlined text-primary fs-6">
+                            splitscreen
+                          </span>
+                          <p class="task-title mb-0 ms-3 ">Public Holiday</p>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                          <span class="material-symbols-outlined">
+                          more_horiz
+                          </span>
+                        </div>
+                        
+                      </li>
+                    </ul>
+                </div>
+                <div class="sc-right-content">
+                  <div class="radio-c">
+                    <input class="radio-c-input" type="radio" value="10" name="myRadio" id="rd-10" checked="true">
+                    <label class="radio-c-label" for="rd-10"><span>10 <p>Fri</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="11" name="myRadio" id="rd-11" checked="false">
+                    <label class="radio-c-label" for="rd-11"><span>11 <p>Sat</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="12" name="myRadio" id="rd-12" checked="false">
+                    <label class="radio-c-label" for="rd-12"><span>12 <p>Sun</p></span></label>
+                    
+                    <input class="radio-c-input" type="radio" value="13" name="myRadio" id="rd-13" checked="false">
+                    <label class="radio-c-label" for="rd-13"><span>13 <p>Mon</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="14" name="myRadio" id="rd-14" checked="false">
+                    <label class="radio-c-label" for="rd-14"><span>14 <p>Tue</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="15" name="myRadio" id="rd-15" checked="false">
+                    <label class="radio-c-label" for="rd-15"><span>15 <p>Wed</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="16" name="myRadio" id="rd-16" checked="false">
+                    <label class="radio-c-label" for="rd-16"><span>16 <p>Thu</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="17" name="myRadio" id="rd-17" checked="false">
+                    <label class="radio-c-label" for="rd-17"><span>17 <p>Fri</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="18" name="myRadio" id="rd-18" checked="false">
+                    <label class="radio-c-label" for="rd-18"><span>18 <p>Sat</p></span></label>
+
+                    <input class="radio-c-input" type="radio" value="19" name="myRadio" id="rd-19" checked="false">
+                    <label class="radio-c-label" for="rd-19"><span>19 <p>Sun</p></span></label>
+
+                </div>
+                <div class="event">
+                   <div class="event-content w-100" style="--start: 2; --end:9; --border-color: var(--secondary-color); --bg-color: rgba(183, 183, 255, 0.05);">
+                    <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px; margin: 12px 10px;  color: var(--border-color);">
+                      campaign
+                      </span>
+                      <p class="task-title mb-0 mt-2 fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam voluptatem cupiditate ad officia sequi, blanditiis obcaecati atque vero fuga sunt nam culpa architecto error, illum iusto eaque officiis alias magni.</p>
+                      <p style="grid-row: 2/3; grid-column: 2/3; font-size: 12px;" >Marketing</p>
+                      <img src="res/img/profile-pic.png" style="margin: 10px 0 0 10px; grid-row: 1/3;" alt="" class="avatar">
+                      <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px;">
+                        more_vert
+                        </span>
+                   </div>
+                </div>
+
+                <div class="event">
+                  <div class="event-content w-100" style="--start: 2; --end:7; --border-color: rgb(144, 0, 255); --bg-color: rgba(144, 0, 255, 0.05);">
+                   <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px; margin: 12px 10px; color: var(--border-color);">
+                     post_add
+                     </span>
+                     <p class="task-title mb-0 mt-2 fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam voluptatem cupiditate ad officia sequi, blanditiis obcaecati atque vero fuga sunt nam culpa architecto error, illum iusto eaque officiis alias magni.</p>
+                     <p style="grid-row: 2/3; grid-column: 2/3; font-size: 12px;" >Posting</p>
+                     <img src="res/img/member-3.png" style="margin: 10px 0 0 10px; grid-row: 1/3;" alt="" class="avatar">
+                     <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px;">
+                       more_vert
+                       </span>
+                  </div>
+               </div>
+
+               <div class="event">
+                <div class="event-content w-100" style="--start: 4; --end:9; --border-color: rgb(255, 60, 164); --bg-color: rgba(255, 60, 164, 0.05);">
+                 <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px; margin: 12px 10px;  color: var(--border-color);">
+                   edit_note
+                   </span>
+                   <p class="task-title mb-0 mt-2 fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam voluptatem cupiditate ad officia sequi, blanditiis obcaecati atque vero fuga sunt nam culpa architecto error, illum iusto eaque officiis alias magni.</p>
+                   <p style="grid-row: 2/3; grid-column: 2/3; font-size: 12px;" >Deleting</p>
+                   <img src="res/img/member-2.png" style="margin: 10px 0 0 10px; grid-row: 1/3;" alt="" class="avatar">
+                   <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px;">
+                     more_vert
+                     </span>
+                </div>
+               </div>
+
+               <div class="event">
+                <div class="event-content w-100" style="--start: 3; --end:10; --border-color: var(--secondary-color); --bg-color: rgba(183, 183, 255, 0.05);">
+                 <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px; margin: 12px 10px;  color: var(--border-color);">
+                   campaign
+                   </span>
+                   <p class="task-title mb-0 mt-2 fw-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam voluptatem cupiditate ad officia sequi, blanditiis obcaecati atque vero fuga sunt nam culpa architecto error, illum iusto eaque officiis alias magni.</p>
+                   <p style="grid-row: 2/3; grid-column: 2/3; font-size: 12px;" >Marketing</p>
+                   <img src="res/img/member-1.png" style="margin: 10px 0 0 10px; grid-row: 1/3;" alt="" class="avatar">
+                   <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px;">
+                     more_vert
+                     </span>
+                </div>
+               </div>
+
+
+
+
+
+              </div>
+                </div>
+               
+              </div>
+
+            </div>
+            <div class="right-container container-fluid">
+              <!-- Audience Demographic -->
+              <div class="ad bg-white rounded mt-3 me-2 mb-3">
+                <div class="demographic-header d-flex align-items-center">
+                  <span class="material-symbols-rounded p-1 rounded-circle bg-primary text-white">
+                    pie_chart
+                    </span>
+                    <h5 class="mb-0 ms-3 pt-1 fw-bold">Audience Demographic</h5>
+                 
+              </div>
+              <hr>
+              <div class="demographic-content">
+                <div class="report-chart d-flex align-items-center justify-content-between pe-3">
+                  <h6 class="mb-0 ms-3 pt-1 fw-bold">Order Time <br> <p class="fw-normal" style="font-size: 11px;">From 1 - 6 Dec 2022</p></h6>
+                  <p class="p-2 text-primary fw-bold rounded" style="font-size: 11px; background-color: #18b6ff16; margin-bottom: 0;">View Report</p>
+                </div>
+                  <div class="container-chart-2">
+                      <div>
+                          <canvas id="myChart2" ></canvas>
+                      </div>
+                      <div class="legend-d-chart ms-3 me-3">
+                          <p style="--lg-color: rgb(1, 126, 250);">Male (68%)</p>
+                          <p style="--lg-color: rgb(81, 203, 255);">Female (38%)</p>
+                          <p style="--lg-color: rgb(48, 218, 136);">Orther (12%)</p>
+                      </div>
+                  </div>
+                  <hr>
+                  <div class="audience-age-table">
+                      <p>Audience Age</p>
+                      <div class="line-persent">
+                          <div class="per-1" style="--per-color: rgb(250, 1, 184); --per: 27%"></div>
+                          <div class="per-1" style="--per-color: rgb(1, 126, 250); --per: 40%"></div>
+                          <div class="per-1" style="--per-color: rgb(48, 218, 136); --per: 26%"></div>
+                          <div class="per-1" style="--per-color: rgb(88, 48, 218); --per: 8%"></div>
+                      </div>
+                      <div class="persent-table">
+                          <div class="persent-row">
+                              <p style="--lg-color: rgb(250, 1, 184);"> <i class="fas fa-chevron-left"></i> 15 years old </p>
+                              <span>
+                                  <h5>21K</h5>
+                                  <h6>27%</h6>  
+                              </span>
+                          </div>
+                          <div class="persent-row">
+                              <p style="--lg-color: rgb(1, 126, 250);"> 20 - 35 years old </p>
+                              <span>
+                                  <h5>64K</h5>
+                                  <h6>40%</h6>
+                              </span>
+                          </div>
+                          <div class="persent-row">
+                              <p style="--lg-color: rgb(48, 218, 136);"> 40 - 50 years old </p>
+                              <span>
+                                  <h5>18K</h5>
+                                  <h6>26%</h6>
+                              </span>
+                          </div>
+                          <div class="persent-row">
+                              <p style="--lg-color: rgb(88, 48, 218);"> <i class="fas fa-chevron-right"></i> 50 years old </p>
+                              <span>
+                                  <h5>5K</h5>
+                                  <h6>8%</h6>
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+              
+              <!-- Most Engangge Audience -->
+              <div class="mea bg-white me-2 p-3 mb-3 rounded">
+                <div class="d-flex align-items-center mb-3">
+                  <span class="material-symbols-rounded p-1 rounded-circle bg-primary text-white">
+                  pie_chart
+                  </span>
+                  <h5 class="mb-0 ms-3 pt-1 fw-bold">Most Engangge Audience</h5>
+                </div>
+                <div class="mea-row d-flex pt-3 pb-3">
+                  <img src="res/img/member-7.png" alt="" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 10px;">
+                  <div class="w-100">
+                    <p class="fw-bolder mb-0">Margareth Zend</p>
+                    <div class="d-flex container-fluid p-0 justify-content-between">
+
+                          <span class="d-flex mt-1 align-items-center justify-content-between f">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                              thumb_up
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 300 likes</p>
+                          </span>
+
+
+                          <span class="d-flex mt-1 align-items-center">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                              comment
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 120 Comments</p>
+                          </span>
+
+                          <span class="d-flex mt-1 align-items-center">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                             share
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 83 Shares</p>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mea-row d-flex pt-3 pb-3">
+                  <img src="res/img/member-7.png" alt="" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 10px;">
+                  <div class="w-100">
+                    <p class="fw-bolder mb-0">Margareth Zend</p>
+                    <div class="d-flex container-fluid p-0 justify-content-between">
+
+                          <span class="d-flex mt-1 align-items-center justify-content-between f">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                              thumb_up
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 300 likes</p>
+                          </span>
+
+
+                          <span class="d-flex mt-1 align-items-center">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                              comment
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 120 Comments</p>
+                          </span>
+
+                          <span class="d-flex mt-1 align-items-center">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                             share
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 83 Shares</p>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mea-row d-flex pt-3 pb-3">
+                  <img src="res/img/member-7.png" alt="" style="width: 45px; height: 45px; border-radius: 50%; margin-right: 10px;">
+                  <div class="w-100">
+                    <p class="fw-bolder mb-0">Margareth Zend</p>
+                    <div class="d-flex container-fluid p-0 justify-content-between">
+
+                          <span class="d-flex mt-1 align-items-center justify-content-between f">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                              thumb_up
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 300 likes</p>
+                          </span>
+
+
+                          <span class="d-flex mt-1 align-items-center">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                              comment
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 120 Comments</p>
+                          </span>
+
+                          <span class="d-flex mt-1 align-items-center">
+                            <span class="material-symbols-rounded fs-6 text-primary">
+                             share
+                            </span>
+                            <p class="mb-0 ms-1" style="font-size: 11px;"> 83 Shares</p>
+                          </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    </div>
