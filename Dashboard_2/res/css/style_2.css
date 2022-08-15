@@ -18,9 +18,18 @@ body {
     display: flex;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0 !important;
+}
+
+
+
+
 .main {
     background-color: var(--bg-color);
     flex: 1;
+    margin-left: 230px;
+    z-index: 99;
 }
 
 .logo {
@@ -41,8 +50,13 @@ body {
 .sidebar {
     background-color: var(--primary-color);
     width: 230px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
 }
+
 
 .collapse-button {
     width: 30px;
@@ -55,7 +69,7 @@ body {
     padding-bottom: 2px;
     font-weight: 800;
     position: absolute;
-    z-index: 100;
+    z-index: 98;
     top: 25px;
     right: -15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
@@ -88,14 +102,14 @@ body {
     color: var(--title-color);
     font-size: 10px;
     margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .sidebar-row {
     background-color: transparent;
     width: 100%;
     border-radius: 6px;
-    margin: 10px 0;
     padding: 12px 10px;
     display: flex;
     justify-content: space-between;
@@ -136,14 +150,18 @@ body {
 
 .sidebar-footer {
     background-color: var(--placeholder-pcolor);
-    margin: 200px 15px 15px 15px;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
     padding: 30px 20px 20px 20px;
 }
 
 .sidebar-footer p {
     color: #fff;
+    text-align: center;
 }
 
 .sidebar-footer button {
@@ -182,7 +200,6 @@ body {
 nav {
     background-color: #fff;
     height: fit-content;
-    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;

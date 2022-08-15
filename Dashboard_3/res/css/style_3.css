@@ -15,49 +15,48 @@
     --title-color: #18b6f2;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
 }
 
 .main {
     display: flex;
     background-color: var(--bg-color);
+    height: fit-content;
     flex: 1;
 }
 
 
 .logo {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     background-color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 15px;
     display: flex;
 }
 
-.logo span {
+.logo i {
     color: white;
     margin: auto;
     font-size: 20px;
 }
 
-aside {
+.sidebar {
     background-color: var(--primary-color);
     width: 230px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
 }
 
-
-.top {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    color: white;
-}
-.top p {
-    margin-bottom: 0;
-}
 
 .collapse-button {
     width: 30px;
@@ -76,17 +75,93 @@ aside {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.sidebar-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+
+.sidebar-header h2 {
+    color: #fff;
+}
+
+.sidebar-content {
+    padding: 8px;
+}
+
+.sidebar-title {
+    color: var(--title-color);
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sidebar-row {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 6px;
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-row:hover {
+    background-color: var(--placeholder-pcolor);
+}
+
+.l-s-row {
+    display: flex;
+}
+
+.sidebar-row .l-s-row span {
+    color: #fff;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.l-s-row p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.sidebar-row span {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: red;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    margin-right: 20px;
+}
 
 .sidebar-footer {
     background-color: var(--placeholder-pcolor);
-    margin: 200px 15px 15px 15px;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
     padding: 30px 20px 20px 20px;
 }
 
 .sidebar-footer p {
     color: #fff;
+    text-align: center;
 }
 
 .sidebar-footer button {
@@ -109,18 +184,19 @@ aside {
     left: calc(50% - 11.5px);
 }
 
-.question-icon {
+.question-icon i {
     border-radius: 20px;
     height: fit-content;
     width: 33px;
     height: 33px;
     margin: auto;
-    font-size: 33px;
+    font-size: 30px;
     padding: 0;
     font-weight: 900;
     color: #18b6f2;
     background-color: #fff;
 }
+
 
 
 
@@ -210,7 +286,7 @@ aside {
      position: absolute;
      right: -15px;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-     z-index: 100;
+     z-index: 101;
 }
 
 .close span { 
@@ -277,6 +353,7 @@ section h6 {
 
 .main-content {
     flex: 1;
+    margin-left: 230px;
 }
 
 
