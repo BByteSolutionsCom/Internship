@@ -1,89 +1,11 @@
 ﻿@page "/dashboard_2"
 
 <div class="d-flex">
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <a href="dashboard_3" class="d-flex text-decoration-none align-items-center">
-                <span class="logo"><i class="fa-solid fa-bolt"></i></span>
-                <h2> Dash</h2>
-            </a>
-            
-        </div>
-        <button type="button" class="collapse-button"><i class="fa-solid fa-angle-left"></i></button>
-        <div class="sidebar-content">
-            <p class="sidebar-title">MAIN MENU</p>
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-solid fa-chart-simple"></i></span>
-                    <p class="mb-0">Dashboard</p>
-                </div>
-                
-            </div>
+   <WebApp_ThucTap_2.Components.Sidebar/>
 
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-regular fa-comment-dots"></i></span>
-                    <p class="mb-0">Inbox</p>
-                </div>
-                <span>1</span>
-            </div>
-            
-            <p class="sidebar-title">Workspace</p>
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-regular fa-user"></i></span>
-                    <p class="mb-0">Accounts</p>
-                </div>
-                
-            </div>
 
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-regular fa-calendar-check"></i></span>
-                    <p class="mb-0">Schedule Post</p>
-                </div>
-            </div>
-
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <p class="mb-0">Communities</p>
-                </div>
-                
-            </div>
-
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-solid fa-chart-line"></i></span>
-                    <p class="mb-0">Alalytics</p>
-                </div>
-            </div>
-
-            <p class="sidebar-title">General</p>
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-regular fa-folder-closed"></i></span>
-                    <p class="mb-0">File & Folder</p>
-                </div>
-                
-            </div>
-
-            <div class="sidebar-row">
-                <div class="l-s-row">
-                    <span><i class="fa-solid fa-gear"></i></span>
-                    <p class="mb-0">Settings</p>
-                </div>
-            </div>
-            
-        </div>
-        <div class="sidebar-footer">
-            <span class="question-icon"><i class="fa-regular fa-circle-question"></i></span>
-            <p>Need help with Dash?</p>
-            <div><button type="button" class="support-button">Go to help center</button></div>
-        </div>
-    </div>
-    <div class="main">
-        <nav class="nav-bar">
+    <div class="main z-index-100">
+        <nav class="nav-bar sticky-top">
             <div class="left-nav">
                 <h1>Dashboard</h1>
             </div>

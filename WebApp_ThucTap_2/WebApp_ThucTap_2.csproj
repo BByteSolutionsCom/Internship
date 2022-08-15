@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Components\Sidebar.razor.css" />
     <None Remove="Pages\Dashboard_1.razor.css" />
     <None Remove="Pages\Dashboard_2.razor.css" />
     <None Remove="Pages\Dashboard_3.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Components\Sidebar.razor.css" />
     <Content Include="Pages\Dashboard_1.razor.css" />
     <Content Include="Pages\Dashboard_2.razor.css" />
     <Content Include="Pages\Dashboard_3.razor.css" />

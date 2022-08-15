@@ -1,125 +1,11 @@
 ﻿@page "/dashboard_3"
 <div class="main">
-        <aside>
-            <a href="/" class="text-decoration-none">
-                <div class="top">
-            <div class="logo">
-              <span class="material-symbols-rounded text-white">
-                bolt
-              </span>
-            </div>
-            <p class="h5">Dash</p>
+         <WebApp_ThucTap_2.Components.Sidebar/>
 
-            <div class="close">
-              <span class="material-symbols-rounded">
-                chevron_left
-                </span>
-            </div>
-          </div>
-                </a>
-          
-          <section>
-            <p>MAIN MENU</p>
-            <ul class="menu-list">
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    insert_chart
-                  </span>
-                  <h6>Dashboard</h6>
-                </div>
-             
-              </li>
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    chat
-                  </span>
-                  <h6>Inbox</h6>
-                </div>
-                <span class="bardge">5</span>
-              </li>
-              
-            </ul>
-          </section>
 
-          <section>
-            <p>Workspace</p>
-            <ul class="menu-list">
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    account_box
-                  </span>
-                  <h6>Accounts</h6>
-                </div>
-             
-              </li>
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    event_note
-                  </span>
-                  <h6>Schedule Post</h6>
-                </div>
-              </li>
-
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    search
-                  </span>
-                  <h6>Communities</h6>
-                </div>
-             
-              </li>
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    query_stats
-                  </span>
-                  <h6>Analytics</h6>
-                </div>
-              </li>
-              
-            </ul>
-          </section>
-
-          <section>
-            <p>General</p>
-            <ul class="menu-list">
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    folder_copy
-                  </span>
-                  <h6>File & Folders</h6>
-                </div>
-             
-              </li>
-              <li class="menu-item">
-                <div class="menu-item__title">
-                  <span class="material-symbols-rounded">
-                    settings
-                  </span>
-                  <h6>Settings</h6>
-                </div>
-              </li>
-              
-            </ul>
-          </section>
-
-          <div class="sidebar-footer">
-            <span class="material-symbols-rounded question-icon">
-              help
-              </span>
-            <p>Need help with Dash?</p>
-            <div><button type="button" class="support-button">Go to help center</button></div>
-        </div>
-        </aside>
-
+   
         <div class="main-content">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light pt-3 pb-3 ps-4">
+          <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light pt-3 pb-3 ps-4" style="z-index: 99;">
        
               <div class="container-fluid d-flex justify-content-between">
                 <span class="navbar-brand mb-1 h1">Dashboard</span>
@@ -175,8 +61,8 @@
                     <div class="legend-crs-chart-title rounded p-3">
                       <div class="legend-crs-chart-item">
                         <div class="lcci-text">
-                            <h2>150K</h2>
-                            <h6 class="h6 fw-normal">Total Reach</h6>
+                            <h2 class="pb-0">150K</h2>
+                            <p class=" fw-normal" style="margin-top: -20px">Total Reach</p>
                         </div>
                       </div>
 
@@ -378,7 +264,7 @@
                    <img src="res/img/member-2.png" style="margin: 10px 0 0 10px; grid-row: 1/3;" alt="" class="avatar">
                    <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px;">
                      more_vert
-                     </span>
+                      </span>
                 </div>
                </div>
 
@@ -392,7 +278,7 @@
                    <img src="res/img/member-1.png" style="margin: 10px 0 0 10px; grid-row: 1/3;" alt="" class="avatar">
                    <span class="material-symbols-rounded" style="grid-row: 1/3; margin-top: 15px;">
                      more_vert
-                     </span>
+                      </span>
                 </div>
                </div>
 

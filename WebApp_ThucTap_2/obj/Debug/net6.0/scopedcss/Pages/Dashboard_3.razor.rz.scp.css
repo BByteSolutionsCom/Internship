@@ -1,5 +1,3 @@
-
-
 *[b-5jrade0stg] {
     margin: 0;
     padding: 0;
@@ -15,50 +13,48 @@
     --title-color: #18b6f2;
 }
 
+p[b-5jrade0stg], h1[b-5jrade0stg], h2[b-5jrade0stg], h3[b-5jrade0stg], h4[b-5jrade0stg], h5[b-5jrade0stg], h6[b-5jrade0stg] {
+    margin-bottom: 0;
+}
+
 body[b-5jrade0stg] {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
 }
 
 .main[b-5jrade0stg] {
     display: flex;
     background-color: var(--bg-color);
+    height: fit-content;
     flex: 1;
 }
 
 
 .logo[b-5jrade0stg] {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     background-color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 15px;
     display: flex;
 }
 
-    .logo span[b-5jrade0stg] {
+    .logo i[b-5jrade0stg] {
         color: white;
         margin: auto;
         font-size: 20px;
     }
 
-aside[b-5jrade0stg] {
+.sidebar[b-5jrade0stg] {
     background-color: var(--primary-color);
     width: 230px;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
 }
 
-
-.top[b-5jrade0stg] {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-    color: white;
-}
-
-    .top p[b-5jrade0stg] {
-        margin-bottom: 0;
-    }
 
 .collapse-button[b-5jrade0stg] {
     width: 30px;
@@ -77,17 +73,93 @@ aside[b-5jrade0stg] {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
+.sidebar-header[b-5jrade0stg] {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+    .sidebar-header img[b-5jrade0stg] {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+        margin-right: 15px;
+    }
+
+
+    .sidebar-header h2[b-5jrade0stg] {
+        color: #fff;
+    }
+
+.sidebar-content[b-5jrade0stg] {
+    padding: 8px;
+}
+
+.sidebar-title[b-5jrade0stg] {
+    color: var(--title-color);
+    font-size: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sidebar-row[b-5jrade0stg] {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 6px;
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .sidebar-row:hover[b-5jrade0stg] {
+        background-color: var(--placeholder-pcolor);
+    }
+
+.l-s-row[b-5jrade0stg] {
+    display: flex;
+}
+
+.sidebar-row .l-s-row span[b-5jrade0stg] {
+    color: #fff;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.l-s-row p[b-5jrade0stg] {
+    font-size: 14px;
+    color: #fff;
+}
+
+.sidebar-row span[b-5jrade0stg] {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    background-color: red;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    margin-right: 20px;
+}
 
 .sidebar-footer[b-5jrade0stg] {
     background-color: var(--placeholder-pcolor);
-    margin: 200px 15px 15px 15px;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
     padding: 30px 20px 20px 20px;
 }
 
     .sidebar-footer p[b-5jrade0stg] {
         color: #fff;
+        text-align: center;
     }
 
     .sidebar-footer button[b-5jrade0stg] {
@@ -109,18 +181,19 @@ aside[b-5jrade0stg] {
     left: calc(50% - 11.5px);
 }
 
-.question-icon[b-5jrade0stg] {
-    border-radius: 20px;
-    height: fit-content;
-    width: 33px;
-    height: 33px;
-    margin: auto;
-    font-size: 33px;
-    padding: 0;
-    font-weight: 900;
-    color: #18b6f2;
-    background-color: #fff;
-}
+    .question-icon i[b-5jrade0stg] {
+        border-radius: 20px;
+        height: fit-content;
+        width: 33px;
+        height: 33px;
+        margin: auto;
+        font-size: 30px;
+        padding: 0;
+        font-weight: 900;
+        color: #18b6f2;
+        background-color: #fff;
+    }
+
 
 
 
@@ -210,7 +283,7 @@ aside[b-5jrade0stg] {
     position: absolute;
     right: -15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+    z-index: 101;
 }
 
     .close span[b-5jrade0stg] {
@@ -276,6 +349,7 @@ section[b-5jrade0stg] {
 
 .main-content[b-5jrade0stg] {
     flex: 1;
+    margin-left: 230px;
 }
 
 
